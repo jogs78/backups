@@ -1,0 +1,40 @@
+------------------------------------------------------
+sudo certbot renew --dry-run
+certbot --nginx -d cobach35.cjservicios.com.mx
+https://linoxide.com/install-vsftpd-with-ssl-tls-on-ubuntu-20-04/
+----------------------------
+systemctl reload nginx
+systemctl restart nginx
+systemctl reload nginx.service
+-----------------
+SHOW VARIABLES LIKE 'validate_password%';
+
+SET GLOBAL validate_password.policy=LOW;
+SET GLOBAL validate_password.length=6;
+
+
+[mysqld]
+validate_password.policy=LOW
+validate_password.length=6
+
+CREATE USER 'sii_root'@'localhost' IDENTIFIED BY 'sii_root';
+GRANT ALL PRIVILEGES ON ittg_sii.* TO 'sii_root'@'localhost';
+FLUSH PRIVILEGES;
+
+ALTER USER 'sii_root'@'localhost' IDENTIFIED BY 'sii_pwd';
+
+
+
+
+en la base de datos mysql 
+select user,host from user;
+
+
+--------------------------------
+systemctl disable vsftpd.service
+systemctl list-unit-files --type service --all | grep ftp
+---------------
+grep ^[^#] 
+-------
+sudo netstat -nputw
+ps aux |grep <pid>
