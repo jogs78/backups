@@ -1,3 +1,18 @@
+-----------
+CREATE USER 'homestead'@'localhost' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON mensajeria.* TO 'homestead'@'localhost';
+FLUSH PRIVILEGES;
+-----------
+$sudo chown -R jogs78:www-data /var/www/<proyecto>
+$sudo chmod -R 775 /var/www/<proyecto>/storage
+$Sudo chmod -R 775 /var/www/<proyecto>/bootstrap/cach
+-----------
+sudo apt-get install php-curl
+sudo apt-get install php-xml
+sudo apt-get install php-zip
+sudo apt-get install php-gd
+sudo apt-get install unzip
+
 ------------------------------------------------------
 sudo certbot renew --dry-run
 certbot --nginx -d cobach35.cjservicios.com.mx
@@ -38,3 +53,67 @@ grep ^[^#]
 -------
 sudo netstat -nputw
 ps aux |grep <pid>
+---------------
+ssh root@contabo
+sudo su - jogs78
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+edit ~/.ssh/authorized_keys and copy the public key
+---------
+Log in a tu servidor como usuario root. ssh root@server_ip_address.
+Usa el comando adduser para agregar un nuevo usuario a tu sistema. ...
+Usa el comando usermod para agregar al usuario al grupo sudo. ...
+> usermod -aG sudo jogs78
+Pureba el acceso sudo en la nueva cuenta.
+---------
+actualizar el servidor 
+Actualizando el instalador de paquetes
+> sudo apt-get update
+Instalando Nginx
+> sudo apt-get install nginx
+Instalar git
+> sudo apt-get install git
+Instalando y asegurando MySQL
+> sudo apt-get install mysql-server
+> sudo mysql_secure_installation
+Instalando y configurando PHP
+> sudo apt-get install php-fpm php-mysql php-mbstring
+Instalar composer:
+> de la pagina getcomposer
+-------------
+--------
+    git config --global --edit
+    git commit --amend --reset-author
+----------
+sudo update-alternatives --config editor
+------------
+Configurar PHP
+sudo vi /etc/php/7.4/fpm/php.ini
+##En caso utilices una versión distinta de PHP, solo cambia la versión en la ruta, por ejemplo para PHP 7.3 haríamos: sudo nano /etc/php/7.3/fpm/php.ini
+
+La línea que necesitamos editar es la siguiente:
+;cgi.fix_pathinfo=1 -> le pondremos 0
+
+> sudo systemctl restart php7.4-fpm
+
+------------
+para que funcione add-apt-repository 
+sudo apt update 
+sudo apt install software-properties-common
+
+----------
+Instalando Certbot
+sudo add-apt-repository ppa:certbot/certbot
+el anterior me marca que certboot is deprecated asi que segui las instrucciones del sitio
+https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+
+------
+lsb_release -a 
+para conocer la version de ubuntu en que estoy
+-------
+instalar snap
+$ sudo apt update
+$ sudo apt install snapd
+-------
+dentro del if [ "$color_prompt" = yes ]; then  en el .bashrc hay un PS1, entrecomillarlo y ponerle la llamada a la funcion
+

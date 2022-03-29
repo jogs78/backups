@@ -1,0 +1,43 @@
+-----------
+root@vmi735549:/etc/nginx/sites-enabled# certbot --nginx -d cobach35.cjservicios.com.mx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for cobach35.cjservicios.com.mx
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/cobach35.cjservicios.com.mx/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/cobach35.cjservicios.com.mx/privkey.pem
+This certificate expires on 2022-06-27.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for cobach35.cjservicios.com.mx to /etc/nginx/sites-enabled/cobach35
+Congratulations! You have successfully enabled HTTPS on https://cobach35.cjservicios.com.mx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+root@vmi735549:/etc/nginx/sites-enabled# certbot --nginx -d mensajeria.ittg.mx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for mensajeria.ittg.mx
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/mensajeria.ittg.mx/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/mensajeria.ittg.mx/privkey.pem
+This certificate expires on 2022-06-28.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for mensajeria.ittg.mx to /etc/nginx/sites-enabled/mensajeria
+Congratulations! You have successfully enabled HTTPS on https://mensajeria.ittg.mx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
