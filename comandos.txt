@@ -1,3 +1,5 @@
+$ ssh-keygen -t ecdsa -b 521 -C "jogs78@gmail.com"
+
 -----------
 CREATE USER 'homestead'@'localhost' IDENTIFIED BY 'secret';
 GRANT ALL PRIVILEGES ON mensajeria.* TO 'homestead'@'localhost';
