@@ -40,4 +40,45 @@ If you like Certbot, please consider supporting our work by:
  * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
  * Donating to EFF:                    https://eff.org/donate-le
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+jogs78@vmi735549:~/backups (master)$sudo certbot --nginx -d rehilete.mx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for rehilete.mx
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/rehilete.mx/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/rehilete.mx/privkey.pem
+This certificate expires on 2022-07-01.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for rehilete.mx to /etc/nginx/sites-enabled/rehilete
+Congratulations! You have successfully enabled HTTPS on https://rehilete.mx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+root@vmi735549:/etc/nginx/sites-enabled# certbot --nginx -d aula.ittg.mx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for aula.ittg.mx
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/aula.ittg.mx/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/aula.ittg.mx/privkey.pem
+This certificate expires on 2022-08-13.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for aula.ittg.mx to /etc/nginx/sites-enabled/aula
+Congratulations! You have successfully enabled HTTPS on https://aula.ittg.mx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
