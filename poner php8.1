@@ -1,0 +1,28 @@
+
+sudo chown -R jogs78:www-data /var/www/tuxtlan
+sudo chmod -R 775 /var/www/tuxtlan/storage
+sudo chmod -R 775 /var/www/tuxtlan/bootstrap/cache
+
+lsb_release -a >> para saber la version del ubuntu
+/usr/bin/php8.1 /usr/local/bin/composer install
+
+agregar el php 8.1
+sudo apt-get install php8.1-cli php8.1-fpm php8.1-mysql
+
+
+
+Primero, debes agregar el repositorio PPA (Personal Package Archive) de Ondřej Surý, que proporciona las versiones más recientes de PHP. Ejecuta los siguientes comandos para agregar el repositorio:
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+
+instalra varios: sudo apt-get install php8.1-cli php8.1-fpm php8.1-mysql
+
+
+**debemos quitar certbot, cual es su nueva opcion
+sudo add-apt-repository --remove ppa:certbot/certbot
+para actualizar leer https://certbot.eff.org/docs/install.html.
+
+
+puse un nuevo sitio-enable
+en el que desacad pone                 fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
